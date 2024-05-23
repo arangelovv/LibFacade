@@ -5,5 +5,6 @@ export interface AppBarOrganismConfig {
   paddingRight?: string;
   title?: string;
   titleColor?: string;
-  borderRadius?: string;
+  borderStyle: "sharp" | "rounded" | "extra-rounded";
+  elevation: "none" | "low-elev" | "medium-elev" | "high-elev";
 }
