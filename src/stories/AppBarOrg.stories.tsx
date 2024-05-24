@@ -11,10 +11,23 @@ type Story = StoryObj<typeof AppBarOrganism>;
 
 export const Sandbox: Story = {
   args: {
-    //👇 The args you need here will depend on your component
     color: "#3f51b5",
-    title: "Default Title",
     position: "sticky",
     borderStyle: "sharp",
+    elevation: "none",
+    paddingLeft: "0px",
+    paddingRight: "0px",
+    title: "Default Title",
+    titleColor: "white",
+  },
+  argTypes: {
+    borderStyle: {
+      options: ["sharp", "rounded", "extra-rounded"],
+      control: { type: "radio" },
+    },
+    elevation: {
+      options: ["none", "low-elev", "medium-elev", "high-elev"],
+      control: { type: "radio" },
+    },
   },
 };
