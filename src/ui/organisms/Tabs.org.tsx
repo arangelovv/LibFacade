@@ -39,7 +39,16 @@ export default function TabsOrganism({ tabsConfig }: TabsOrganismConfig) {
         </Box>
 
         {tabsConfig.map((tab) => (
-          <TabPanel key={tab.index} value={tab.index}>
+          <TabPanel
+            key={tab.index}
+            value={tab.index}
+            sx={{
+              width: "100%",
+              height: "100%",
+              padding: "0px",
+              backgroundColor: "#fafafa",
+            }}
+          >
             {tab.children}
           </TabPanel>
         ))}
