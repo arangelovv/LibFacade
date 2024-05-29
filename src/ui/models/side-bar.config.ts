@@ -11,5 +11,6 @@ export interface sidebarOrganismConfig {
     | "extra-rounded-left"
     | "extra-rounded-right";
   title?: string;
-  titleAlignment: "left" | "right" | "center";
+  titleAlignment?: "left" | "right" | "center";
+  titleColor: string;
 }

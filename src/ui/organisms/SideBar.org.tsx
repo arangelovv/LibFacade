@@ -2,14 +2,15 @@ import { Box, Drawer } from "@mui/material";
 import { sidebarOrganismConfig } from "../models/side-bar.config";
 import TypographyAtom from "../atoms/TypographyAtom";
 
-export default function SideBarOrganism({
+export default function SidebarOrganism({
   position,
   drawerWidht,
   drawerColor,
   children,
   borderStyle,
   title = "",
-  titleAlignment,
+  titleAlignment = "center",
+  titleColor,
 }: sidebarOrganismConfig & { children?: React.ReactNode }) {
   const borderRadiusMap = {
     sharp: "0px",
@@ -58,9 +59,17 @@ export default function SideBarOrganism({
             display: "flex",
             justifyContent: titlePoisition,
             width: "100%",
+            marginTop: "5%",
+            marginBottom: "10%",
           }}
         >
-          <TypographyAtom variant="h5" fontWeight="500" text={title} />
+          <TypographyAtom
+            variant="h5"
+            fontWeight="500"
+            text={title}
+            color={titleColor}
+            fontFamily="Roboto, sans-serif"
+          />
         </Box>
       )}
       {children}
