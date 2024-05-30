@@ -48,7 +48,7 @@ export default function ButtonAtom({
 
   return (
     <Button
-      onChangeCapture={onClick}
+      onClick={onClick}
       variant={variant}
       startIcon={buttonIcon}
       sx={{
