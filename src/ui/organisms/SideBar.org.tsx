@@ -68,7 +68,6 @@ export default function SidebarOrganism({
             fontWeight="500"
             text={title}
             color={titleColor}
-            fontFamily="Roboto, sans-serif"
           />
         </Box>
       )}
