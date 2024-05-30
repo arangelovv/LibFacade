@@ -54,8 +54,6 @@ export default function ButtonAtom({
       sx={{
         textTransform: "none",
         fontSize: "16px",
-        paddingLeft: "16px",
-        paddingRight: "16px",
         display: "flex",
         flexDirection: "row",
         borderRadius: borderRadius,
@@ -79,7 +77,11 @@ export default function ButtonAtom({
         }),
       }}
     >
-      <Box sx={{ textAlign: textAlignment, width: "100px" }}>{buttonText}</Box>
+      <Box
+        sx={{ textAlign: textAlignment, width: "100px", paddingLeft: "20px" }}
+      >
+        {buttonText}
+      </Box>
     </Button>
   );
 }
