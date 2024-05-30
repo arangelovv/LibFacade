@@ -52,6 +52,10 @@ export default function ButtonAtom({
       variant={variant}
       startIcon={buttonIcon}
       sx={{
+        textTransform: "none",
+        fontSize: "16px",
+        paddingLeft: "16px",
+        paddingRight: "16px",
         display: "flex",
         flexDirection: "row",
         borderRadius: borderRadius,
