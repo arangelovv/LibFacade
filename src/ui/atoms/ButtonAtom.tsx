@@ -8,12 +8,10 @@ export default function ButtonAtom({
   buttonColor = "#8ab6fc",
   buttonColorOnHover,
   outlineColorOnHover = "gray",
-  outlineColor = "gray",
+  outlineColor = "#0000001f",
   buttonIcon,
   borderStyle = "sharp",
   elevation = "none",
-  textAlignment = "center",
-  width,
   activeState = false,
   activeStateColor,
   onClick,
@@ -62,7 +60,6 @@ export default function ButtonAtom({
         backgroundColor:
           variant !== "outlined" && variant !== "text" ? buttonColor : "",
         color: textColor,
-        width: width,
         "&:hover": {
           backgroundColor: buttonColorOnHover || buttonColor,
           boxShadow: buttonElevationOnHover,
@@ -77,11 +74,7 @@ export default function ButtonAtom({
         }),
       }}
     >
-      <Box
-        sx={{ textAlign: textAlignment, width: "100px", paddingLeft: "20px" }}
-      >
-        {buttonText}
-      </Box>
+      {buttonText}
     </Button>
   );
 }
