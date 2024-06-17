@@ -16,6 +16,7 @@ export const Sandbox: Story = {
     drawerWidht: "200px",
     drawerColor: "#3f51b5",
     borderStyle: "sharp",
+    elevation: "none",
   },
   argTypes: {
     position: {
@@ -32,6 +33,10 @@ export const Sandbox: Story = {
         "extra-rounded-left",
         "extra-rounded-right",
       ],
+      control: { type: "radio" },
+    },
+    elevation: {
+      options: ["none", "low-elev", "medium-elev", "high-elev"],
       control: { type: "radio" },
     },
   },

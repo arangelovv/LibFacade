@@ -6,6 +6,7 @@ export default function SidebarOrganism({
   drawerWidht = "240px",
   drawerColor = "#3f51b5",
   borderStyle = "sharp",
+  elevation = "none",
   children,
 }: sidebarOrganismConfig & { children?: React.ReactNode }) {
   const borderRadiusMap = {
@@ -19,6 +20,16 @@ export default function SidebarOrganism({
   };
   const borderRadius = borderRadiusMap[borderStyle] || "0px";
 
+  const elevationValueMap = {
+    none: "",
+    "low-elev":
+      "1px 0px 3px rgba(0, 0, 0, 0.2), 1px 0px 1px rgba(0, 0, 0, 0.14), 2px 0px 1px rgba(0, 0, 0, 0.12)",
+    "medium-elev":
+      "3px 0px 6px rgba(0, 0, 0, 0.16), 3px 0px 6px rgba(0, 0, 0, 0.23)",
+    "high-elev":
+      "10px 0px 20px rgba(0, 0, 0, 0.19), 6px 0px 6px rgba(0, 0, 0, 0.23)",
+  };
+  const elevationValue = elevationValueMap[elevation] || "none";
   return (
     <Drawer
       variant="permanent"
@@ -27,6 +38,8 @@ export default function SidebarOrganism({
         width: "fit-content",
         boxSizing: "border-box",
         height: "100%",
+        boxShadow: elevationValue,
+        borderRadius: borderRadius,
         "& .MuiDrawer-paper": {
           boxSizing: "border-box",
           padding: "10px",
