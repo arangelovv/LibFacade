@@ -1,16 +1,12 @@
-import { Box, Drawer } from "@mui/material";
+import { Drawer } from "@mui/material";
 import { sidebarOrganismConfig } from "../models/side-bar.config";
-import TypographyAtom from "../atoms/TypographyAtom";
 
 export default function SidebarOrganism({
-  position,
-  drawerWidht,
-  drawerColor,
+  position = "left",
+  drawerWidht = "240px",
+  drawerColor = "#3f51b5",
+  borderStyle = "sharp",
   children,
-  borderStyle,
-  title = "",
-  titleAlignment = "center",
-  titleColor,
 }: sidebarOrganismConfig & { children?: React.ReactNode }) {
   const borderRadiusMap = {
     sharp: "0px",
@@ -23,19 +19,12 @@ export default function SidebarOrganism({
   };
   const borderRadius = borderRadiusMap[borderStyle] || "0px";
 
-  const titleAlignmentMap = {
-    left: "flex-start",
-    right: "flex-end",
-    center: "center",
-  };
-  const titlePoisition = titleAlignmentMap[titleAlignment] || "center";
-
   return (
     <Drawer
       variant="permanent"
       anchor={position}
       sx={{
-        width: { drawerWidht },
+        width: "fit-content",
         boxSizing: "border-box",
         height: "100%",
         "& .MuiDrawer-paper": {
@@ -53,24 +42,6 @@ export default function SidebarOrganism({
         },
       }}
     >
-      {title.trim() !== "" && (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: titlePoisition,
-            width: "100%",
-            marginTop: "5%",
-            marginBottom: "10%",
-          }}
-        >
-          <TypographyAtom
-            variant="h5"
-            fontWeight="500"
-            text={title}
-            color={titleColor}
-          />
-        </Box>
-      )}
       {children}
     </Drawer>
   );

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import SidebarOrganism from "../../ui/organisms/Sidebar.org";
 import { Box } from "@mui/material";
+import SidebarOrganism from "../../ui/organisms/SideBar.org";
 
 const meta: Meta<typeof SidebarOrganism> = {
   title: "Atomic Design Components/Organisms/Sidebar",
@@ -15,9 +15,6 @@ export const Sandbox: Story = {
     position: "left",
     drawerWidht: "200px",
     drawerColor: "#3f51b5",
-    title: "Default Title",
-    titleAlignment: "center",
-    titleColor: "white",
     borderStyle: "sharp",
   },
   argTypes: {
@@ -35,10 +32,6 @@ export const Sandbox: Story = {
         "extra-rounded-left",
         "extra-rounded-right",
       ],
-      control: { type: "radio" },
-    },
-    titleAlignment: {
-      options: ["left", "right", "center"],
       control: { type: "radio" },
     },
   },
