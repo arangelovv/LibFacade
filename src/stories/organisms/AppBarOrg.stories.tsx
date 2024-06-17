@@ -18,8 +18,6 @@ export const Sandbox: Story = {
     elevation: "none",
     paddingLeft: "0px",
     paddingRight: "0px",
-    title: "Default Title",
-    titleColor: "white",
   },
   argTypes: {
     borderStyle: {

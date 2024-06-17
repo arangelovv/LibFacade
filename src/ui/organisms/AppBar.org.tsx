@@ -7,8 +7,6 @@ export default function AppBarOrganism({
   position,
   paddingLeft,
   paddingRight,
-  title,
-  titleColor,
   borderStyle,
   children,
   elevation,
@@ -55,18 +53,7 @@ export default function AppBarOrganism({
         borderRadius: getBorderStyleValue(borderStyle),
       }}
     >
-      <Toolbar>
-        {!!title ? (
-          <TypographyAtom
-            variant="h5"
-            text={title}
-            color={titleColor}
-            fontWeight="500"
-            flexGrow="1"
-          />
-        ) : null}
-        {children}
-      </Toolbar>
+      <Toolbar>{children}</Toolbar>
     </AppBar>
   );
 }
