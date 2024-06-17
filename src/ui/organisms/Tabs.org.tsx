@@ -16,8 +16,6 @@ export default function TabsOrganism({ tabsConfig }: TabsOrganismConfig) {
         typography: "body1",
         paddingLeft: "10px",
         paddingRight: "10px",
-        backgroundColor: "#fafafa",
-        height: "100vh",
       }}
     >
       <TabContext value={value}>
@@ -44,9 +42,7 @@ export default function TabsOrganism({ tabsConfig }: TabsOrganismConfig) {
             value={tab.index}
             sx={{
               width: "100%",
-              height: "100%",
               padding: "0px",
-              backgroundColor: "#fafafa",
             }}
           >
             {tab.children}
