@@ -1,6 +1,5 @@
 import { AppBar, Toolbar } from "@mui/material";
 import { AppBarOrganismConfig } from "../models/app-bar.config";
-import TypographyAtom from "../atoms/TypographyAtom";
 
 export default function AppBarOrganism({
   color,

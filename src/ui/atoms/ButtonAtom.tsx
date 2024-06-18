@@ -1,13 +1,13 @@
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { ButtonConfig } from "../models/button.config";
 
 export default function ButtonAtom({
   variant = "contained",
-  textColor,
-  buttonText,
-  buttonColor = "#8ab6fc",
-  buttonColorOnHover,
-  outlineColorOnHover = "gray",
+  textColor = "#252525de",
+  buttonText = "Default",
+  buttonColor = "#dddddd",
+  onHoverColor = "#bebebe",
+  outlineOnHoverColor = "#0000007f",
   outlineColor = "#0000001f",
   buttonIcon,
   borderStyle = "sharp",
@@ -61,16 +61,16 @@ export default function ButtonAtom({
           variant !== "outlined" && variant !== "text" ? buttonColor : "",
         color: textColor,
         "&:hover": {
-          backgroundColor: buttonColorOnHover || buttonColor,
+          backgroundColor: onHoverColor || buttonColor,
           boxShadow: buttonElevationOnHover,
           border:
-            variant === "outlined" ? `1px solid ${outlineColorOnHover}` : "0px",
+            variant === "outlined" ? `1px solid ${outlineOnHoverColor}` : "0px",
         },
         ...(activeState && {
           backgroundColor: activeStateColor || buttonColor,
           boxShadow: buttonElevationOnHover,
           border:
-            variant === "outlined" ? `1px solid ${outlineColorOnHover}` : "0px",
+            variant === "outlined" ? `1px solid ${outlineOnHoverColor}` : "0px",
         }),
       }}
     >

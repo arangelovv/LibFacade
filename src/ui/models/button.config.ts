@@ -3,9 +3,9 @@ export interface ButtonConfig {
   buttonText: string;
   textColor?: string;
   buttonColor?: string;
-  buttonColorOnHover?: string;
+  onHoverColor?: string;
   outlineColor?: string;
-  outlineColorOnHover?: string;
+  outlineOnHoverColor?: string;
   buttonIcon?: any;
   borderStyle?: "sharp" | "rounded" | "extra-rounded";
   elevation?: "none" | "low-elev" | "medium-elev" | "high-elev";

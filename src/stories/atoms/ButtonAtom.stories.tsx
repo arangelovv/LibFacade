@@ -13,14 +13,6 @@ type Story = StoryObj<typeof ButtonAtom>;
 export const Sandbox: Story = {
   args: {
     buttonIcon: <Mail></Mail>,
-    variant: "contained",
-    textColor: "black",
-    buttonText: "Default",
-    buttonColor: "#8ab6fc",
-    buttonColorOnHover: "",
-    outlineColorOnHover: "gray",
-    outlineColor: "gray",
   },
   argTypes: {},
-  render: (args) => <ButtonAtom {...args}></ButtonAtom>,
 };
