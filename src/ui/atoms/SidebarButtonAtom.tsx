@@ -59,6 +59,7 @@ export default function SidebarButtonAtom({
         alignItems: "center",
         justifyContent: "flex-start",
         lineHeight: "2",
+        height: "40px",
         borderRadius: borderRadius,
         boxShadow: buttonElevation,
         border: variant === "outlined" ? `1px solid ${outlineColor}` : "0px",

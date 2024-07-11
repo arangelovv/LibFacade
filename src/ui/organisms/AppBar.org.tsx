@@ -3,7 +3,7 @@ import { AppBarOrganismConfig } from "../models/app-bar.config";
 
 export default function AppBarOrganism({
   color,
-  position,
+  position = "static",
   paddingLeft,
   paddingRight,
   borderStyle,
@@ -43,7 +43,7 @@ export default function AppBarOrganism({
   };
   return (
     <AppBar
-      position={(position = "static")}
+      position={position}
       sx={{
         backgroundColor: `${color}`,
         paddingLeft: `${paddingLeft}`,

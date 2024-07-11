@@ -42,7 +42,6 @@ export default function SidebarOrganism({
         borderRadius: borderRadius,
         "& .MuiDrawer-paper": {
           boxSizing: "border-box",
-          padding: "10px",
           position: "static",
           border: "none",
           display: "flex",
