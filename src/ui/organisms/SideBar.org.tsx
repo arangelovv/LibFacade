@@ -40,6 +40,8 @@ export default function SidebarOrganism({
         height: "100%",
         boxShadow: elevationValue,
         borderRadius: borderRadius,
+        transition: "width 0.2s ease-in-out", // Add transition here
+
         "& .MuiDrawer-paper": {
           boxSizing: "border-box",
           position: "static",
@@ -51,6 +53,7 @@ export default function SidebarOrganism({
           width: drawerWidht,
           backgroundColor: drawerColor,
           borderRadius: borderRadius,
+          transition: "width 0.2s ease-in-out", // Add transition here
         },
       }}
     >
