@@ -4,7 +4,7 @@ import { ButtonConfig } from "../models/button.config";
 export default function SidebarButtonAtom({
   variant = "contained",
   textColor = "#252525de",
-  buttonText = "Default",
+  buttonText,
   buttonColor = "#dddddd",
   onHoverColor = "#bebebe",
   outlineOnHoverColor = "#0000007f",
@@ -50,6 +50,7 @@ export default function SidebarButtonAtom({
       variant={variant}
       sx={{
         width: "100%",
+        minWidth: "auto",
         padding: "8px",
         textTransform: "none",
         fontSize: "16px",
@@ -57,7 +58,7 @@ export default function SidebarButtonAtom({
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "flex-start",
+        justifyContent: buttonText ? "flex-start" : "center",
         lineHeight: "2",
         height: "40px",
         borderRadius: borderRadius,
@@ -82,7 +83,11 @@ export default function SidebarButtonAtom({
     >
       {buttonIcon && (
         <Box
-          sx={{ display: "flex", alignItems: "center", marginRight: "16px" }}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginRight: buttonText ? "16px" : "0px",
+          }}
         >
           {buttonIcon}
         </Box>

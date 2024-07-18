@@ -1,6 +1,6 @@
 export interface ButtonConfig {
   variant: "text" | "contained" | "outlined";
-  buttonText: string;
+  buttonText: string | undefined;
   textColor?: string;
   buttonColor?: string;
   onHoverColor?: string;
